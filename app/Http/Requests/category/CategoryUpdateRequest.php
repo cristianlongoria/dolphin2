@@ -13,7 +13,7 @@ class CategoryUpdateRequest extends Request
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +24,8 @@ class CategoryUpdateRequest extends Request
     public function rules()
     {
         return [
-            //
+            'name' => 'required|max:50',
+            'image' => 'mimes:jpg,jpeg,bmp,png'
         ];
     }
 }

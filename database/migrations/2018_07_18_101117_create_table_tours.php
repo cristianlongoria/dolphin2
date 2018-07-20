@@ -14,7 +14,14 @@ class CreateTableTours extends Migration
     {
         Schema::create('tours', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('category_id')->unsigned();
             $table->string('name');
+            $table->string('location')->default('isla mujeres');
+            $table->decimal('price', 6,2)->default(00.00);
+            $table->text('description');
+            $table->string('path_image')->default('demoTour.png');
+            $table->boolean('state')->default('false');
+            $table->foreign('category_id')->references('id')->on('categories');
             $table->timestamps();
         });
     }

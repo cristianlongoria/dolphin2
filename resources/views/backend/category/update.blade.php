@@ -8,4 +8,4 @@
 @if(Session::has('error'))
     <h1>{{ Session::get('error') }}</h1>
 @endif
-@include('backend.category.forms.create-category')
+@include('backend.category.forms.update-category')

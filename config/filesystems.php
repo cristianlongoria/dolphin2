@@ -47,6 +47,10 @@ return [
             'driver' => 'local',
             'root'   => storage_path('app'),
         ],
+        'categorystore' => [
+            'driver' => 'local',
+            'root'   => public_path('images/category'),
+        ],
 
         'ftp' => [
             'driver'   => 'ftp',
